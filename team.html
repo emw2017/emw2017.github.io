@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- mobile metas -->
+    <head><link href="css/bootstrap.min.css" rel="stylesheet"><style> iframe{width: 100%;border: 2px solid #ccc;}</style></head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Openmaps &bull; Our Team</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- fevicon -->
+    <link rel="icon" href="images/logo.png" type="image/gif" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/index1.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet"> 
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<style>
+#more {display: none;}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --gray: #85888C;
+} /* variables*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.header{
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+/* Logo */
+.logo1{
+    color: #43960f;
+    font-size: 25px;
+    margin-left: 10px;
+    max-width: 80%
+}
+.logo2{
+    color: var(--black);
+    font-size: 25px;
+    margin-left: 10px;
+    max-width: 80%
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #165709;
+    overflow: hidden;
+
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+.menu a:hover{
+    background-color: var(--gray);
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 24px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+
+    }
+
+    .hamb{
+        display: none;
+    }
+}
+/* Sub nav */
+.subnav-content {
+    background-color: transparent;
+    width: 100%;
+    z-index: 1;
+    padding: 0px 0 ;
+    display: none;
+    border-radius: 5px;
+    position:fixed;
+  }
+.subnav-content a {
+    color: white;
+    text-shadow: 55px;
+    text-decoration: none;
+    padding: 0;
+    margin: 5px 32px;
+    text-align: left;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+}
+.subnav:hover .subnav-content {
+    display: block;
+    position: unset;
+    color: #43960f
+
+}
+.subnavbtn{
+        text-align: left;
+        padding-left: 30px;
+        padding-right: 15px;
+        color: white;
+        padding-top: 30px;
+    }
+....
+@media (min-width: 768px) {
+   ....
+    /* Sub nav */
+    .subnav-content {
+        padding: 20px 0 ;
+        display: none;
+        background-color:  var(--black);
+    }
+    .subnav-content a {
+        color: white;
+
+    }
+}
+
+
+</style>
+</head>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+        <header class="header">
+        <!-- Logo -->
+        <a href="team.html" class="logo1">openmaps</a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            
+            <ul class="menu">
+                      <li><a href="index.html">Openmaps Consultancy</a></li>
+                      <li><a href="atom0.html">Atom Properties</a></li>
+                      <li><a href="train.html">Training</a></li>
+            </ul>
+        </nav>
+    </header>
+        <!-- Nav -->
+
+
+                <div class="container-fluid">
+                    <div class="row">
+                        
+
+
+
+                        <div class="col-xl-10 col-lg-8 col-md-8 col-sm-9">
+                          <style type="text/css">
+                              .col-xl-10 {-ms-flex: 0 0 100%; flex: 0 0 100%;max-width: 100%; position: relative; width: 100%;min-height: 1px;  padding-right: 30px;  padding-left: 15px;   position: fixed;}
+                              .navbar {display: -ms-flexbox; display: ruby;-ms-flex-wrap: wrap;
+                                  flex-wrap: wrap; -ms-flex-align: center; align-items: self-end; -ms-flex-pack: justify;justify-content: space-between; padding: .5rem 18rem;}
+                          </style>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header inner -->
+
+        <!-- end header -->
+        <section class="slider_section">
+            
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                         <div class="logo">
+                                        
+                                    </div>
+                        <div class="container-fluid padding_dd">
+                            <div class="carousel-caption">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="text-bg">
+                                            <span>Welcome To Openmaps Consultancy</span>
+                                            <h1>We are gritty about what we do!</h1>
+                                            <p>Topographic Surveys • Setting Out • Property (Sectional) Surveys • Drone Surveys • Underground Utility Mapping • Data Analysis • As-Built Surveys</p>
+                                            <a href="#contact">Contact Us</a>
+                                            <!-- <a href="#">Vegetable</a> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="images_box">
+                                            <figure><img src="images/signal.svg"></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </section>
+        </div>
+    </header>
+
+
+
+    <!-- about  -->
+    
+    <!-- end abouts -->
+
+
+
+
+
+
+
+
+
+<div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2> Our <strong class="llow">Team</strong> </h2>
+                    </div>
+                </div>
+            </div>
+
+
+ <div class="transparent-container">
+   <div class="team-member">
+      <img src="Joshua.jpg" alt="Joshua Irungu" class="profile-pic" onclick="toggleInfo(1)">
+      <h2>Joshua Irungu</h2>
+     <b><p class="title">CEO, Project Manager</p></b>
+      <div class="member-info" id="member-info-1">
+      <b>Education</b><br>
+        <b>2010 - 2014:</b> BSc in Geomatic Engineering and Geospatial Information Systems (JKUAT) (Tutorial Fellow)<br><br>
+        <b>Jan - Dec 2018:</b> Certificate in Business Administration (BNI University)<br><br>
+        <b>2016 - 2020:</b> Master's Degree in Geospatial Information Systems and Remote sensing<br><br>
+        <b>Years of practice: </b> 2015-Present<br><br>                  
+        <b>Interests and Hobbies: </b>Land Policy and Governance<br>
+      </div>
+    </div>
+    <div class="team-member">
+      <img src="Nancy.png" alt="Nancy Mwangi" class="profile-pic" onclick="toggleInfo(2)">
+      <h2>Nancy Mwangi</h2>
+        <b><p class="title">Associate Surveyor</p></b>
+      <div class="member-info" id="member-info-2">
+        <b>Education</b><br>
+        <b>2015 - ongoing: </b>PHD studies in Geographical Information Science (GIS) and Remote Sensing at JKUAT.<br><br>
+        <b>2007 - 2008: </b>Master’s Degree in Geospatial Information Systems (GIS) and Remote Sensing JKUAT.<br><br>
+        <b>2004 - 2005: </b>Certificate in Planning and Management of National Mapping & Surveying Agencies- Geographical Survey Institute (GSI); Japan<br><br>
+        <b>2005: </b>Project management- GSI, Japan<br><br>
+        <b>2001: </b>Certificate in Global Positioning Systems (GPS). –Kenya Institute of Surveying and Mapping (KISM), Kenya<br><br>
+        <b>1990 - 1996: </b> Bachelor of Science Degree in Surveying and Photogrammetry University of Nairobi.<br><br>
+        <b>Years of Practice:</b> 1997 - Date<br><br>
+        <b>Interests and Hobbies:</b> Land Surveying and mapping
+      </div>
+    </div>
+
+
+    <div class="team-member">
+      <img src="JKamau.jpeg" alt="Joshua Njuguna" class="profile-pic" onclick="toggleInfo(3)">
+      <h2>Joshua Kamau</h2>
+        <b><p class="title">Surveying and Mapping</p></b>
+        <div class="member-info" id="member-info-3">
+        <b>Education:</b><br>Degree in Geomatic Engineering and Geospatial Information Systems.(GEGIS) at JKUAT<br><br>
+        <b>Years of practice:</b> <br>2019 - date <br><br>
+        <b>Interests and Hobbies:</b><br> Land Surveying and mapping
+      </div>
+    </div>
+
+    <div class="team-member">
+      <img src="Amos.jpeg" alt="Amos Kipyegon" class="profile-pic" onclick="toggleInfo(4)">
+      <h2>Amos Kipyegon</h2>
+       <b><p class="title">GeoDATA Analyst</p></b>
+      <div class="member-info" id="member-info-4">
+        <b>Education:</b><br> 2017-2022: BSc Geospatial Information Science (GIS) (JKUAT)<br><br>
+        <b>Years of practice:</b> <br>Feb 2021 - date <br><br>
+        <b>Interests and Hobbies:</b><br> Mobile GIS and Geodata Analysis
+      </div>
+    </div>
+
+
+    <div class="team-member">
+      <img src="David.jpg" alt="Thuita Mwangi" class="profile-pic" onclick="toggleInfo(5)">
+      <h2>Thuita Mwangi</h2>
+       <b><p class="title">Surveyor, Nanyuki</p></b>
+     <div class="member-info" id="member-info-5">
+        <b>Education:</b>
+        <p><b>July 2020 - August 2020:</b> Central University of Karnataka (GIS training(QGIS))</p>
+        <p><b>2015-2018:</b> Dedan Kimathi University of Technology (BSc Geomatics and Geospatial Information Science)</p>
+        <p><b>2012-2014:</b> Kenya institute of Surveying and Mapping(Diploma in Land Survey)</p>
+        <p><b>Years of Practice:</b> 2017 - Present</p>
+        <b>Interests and Hobbies:</b><br> Land Surveying and Mapping
+      </div>
+    </div>
+
+    
+    <div class="team-member">
+      <img src="Humphrey.jpg" alt="Humphrey Kubai" class="profile-pic" onclick="toggleInfo(6)">
+      <h2>Humphrey Kubai</h2>
+       <b><p class="title">Surveyor, Mombasa</p></b>
+      <div class="member-info" id="member-info-6">
+      <b>Education</b> <br><b>2020 - Date:</b> Taita Taveta University (BSc in Geoinformatics)<br><br>
+                           <b>2012 - 2014:</b> Kenya Institute of Surveying And Mapping (Diploma in Land Survey and Mapping)<br>
+       <p><b>Years of Practice:</b> 2013 - Present</p>
+        <b>Interests and Hobbies:</b><br> Land Surveying and Mapping
+      </div>
+    </div>
+
+    <div class="team-member">
+      <img src="Paul.png" alt="Paul Nyongesa" class="profile-pic" onclick="toggleInfo(7)">
+      <h2>Paul Nyongesa</h2>
+      <b><p class="title">Assistant Surveyor</p></b>
+      <div class="member-info" id="member-info-7">
+        <b>Education</b><br><b>2017 - 2020: </b>Kenya Institute of Surveying and Mapping (Diploma in Land Survey and Mapping)<br><br>
+        <b>March – April 2019: </b>Kenya Institute of Surveying and Mapping (Certificate in Geographical Information System)<br>
+        <p><b>Years of Practice: </b> 2021 - Present</p>
+        <b>Interests and Hobbies: </b><br> Land Surveying and Mapping
+      </div>
+    </div>
+    <div class="team-member">
+      <img src="PMuthee.jpg" alt="Peter Muthee" class="profile-pic" onclick="toggleInfo(8)">
+      <h2>Peter Muthee</h2>
+      <b><p class="title">Surveyor, South Sudan</p></b>
+      <div class="member-info" id="member-info-8">
+        <b>Education</b><br><b>2010 - 2014: </b>BSc. Geomatic Engineering and Geospatial Information<br><br>
+        <p><b>Years of Practice: </b> 2013 - Present</p>
+        <b>Interests and Hobbies: </b><br> Land Surveying and Mapping
+      </div>
+    </div>
+
+    <div class="team-member">
+      <img src="Ephantus.jpg" alt="Ephantus Nyaga" class="profile-pic" onclick="toggleInfo(9)">
+      <h2>Ephantus Nyaga</h2>
+      <b><p class="title">Surveyor</p></b>
+      <div class="member-info" id="member-info-9">
+        <b>Education</b><br><b>May 2019 - November 2019: </b>Regional Center Training Institute (Diploma in Land Surveying)<br><br>
+        <b>September 2018 - December 2018: </b>Regional Center Training Institute (Software Learning)<br><br>
+        <p><b>Years of Practice: </b> 2018 - Present</p>
+        <b>Interests and Hobbies: </b><br> Land Surveying and Mapping
+      </div>
+    </div>
+
+    <div class="team-member">
+      <img src="Peter.jpg" alt="Peter Gitau" class="profile-pic" onclick="toggleInfo(10)">
+      <h2>Peter Gitau</h2>
+      <b><p class="title">Surveyor</p></b>
+      <div class="member-info" id="member-info-10">
+        <b>Education</b><br><b>2017 - 2020: </b>Kenya Institute of Surveying and Mapping (Diploma in Land Survey and Mapping)<br><br>
+        <b>March – April 2019: </b>Kenya Institute of Surveying and Mapping (Certificate in Geographical Information System)<br>
+        <p><b>Years of Practice: </b> 2018 - Present</p>
+        <b>Interests and Hobbies: </b><br> Land Surveying and Mapping
+      </div>
+    </div>
+    <div class="team-member">
+      <img src="BKendi.png" alt="Brenda Kendi" class="profile-pic" onclick="toggleInfo(11)">
+      <h2>Brenda Kendi</h2>
+      <b><p class="title">GIS & Mapping Expert</p></b>
+      <div class="member-info" id="member-info-11">
+        <b>Education</b><br><b>2015 - 2019: </b>Bachelor of Science in Geospatial Information Science(JKUAT)
+                            <br><br>
+        <p><b>Years of Practice: </b> 2019 - Present</p>
+        <b>Interests and Hobbies: </b> <li>Mobile GIS and Geodata Analysis</li>
+                                       <li>Social networking</li>
+                                       <li>Interaction with different cultures and learning their traditions</li>
+
+      </div>
+    </div>
+
+    
+
+    <div class="team-member">
+      <img src="CBiwot.png" alt="Christanus Biwot" class="profile-pic" onclick="toggleInfo(12)">
+      <h2>Christanus Biwot</h2>
+      <b><p class="title">Surveyor, Eldoret</p></b>
+      <div class="member-info" id="member-info-12">
+        <b>Education</b><br><b>2010 - 2015: </b>Bachelor’s Degree in Geomatic Engineering and Geospatial Information Systems(JKUAT)<br><br>
+        <p><b>Years of Practice: </b> 2016 - Present</p>
+        <b>Interests and Hobbies: </b><br> Land Surveying and Mapping
+      </div>
+    </div> 
+<script>
+    function toggleInfo(id) {
+  var info = document.getElementById("member-info-" + id);
+  if (info.style.display === "none") {
+    info.style.display = "block";
+  } else {
+    info.style.display = "none";
+  }
+}
+
+  </script>
+
+
+
+
+
+    <!-- vegetable -->
+    
+    <!-- end vegetable -->
+
+
+
+
+    <!-- clients -->
+    
+
+    <!-- end clients -->
+<div id="contact" class="contact">
+<div class="section-space60">
+     <div class="container">
+         <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="titlepage">
+                        <h2>Contact <strong class="llow">Us</strong> </h2>
+                    </div>
+            </div>
+         </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="outline pinside40">
+                    <div class="row">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeL8ovsXGjQPydjVhRK8xMQM1oYQHVA1DT18qZhHV6aWeSEnQ/viewform?embedded=true" width="300" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8387465075866!2d36.807471714101105!3d-1.2696632359647788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173bc3ef9e25%3A0xf27a160c394bcdee!2sWestlands%20Business%20Park.!5e0!3m2!1sen!2ske!4v1664699316426!5m2!1sen!2ske" width="300" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- end contact -->
+
+    <!--  footer -->
+    
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer section-space60">
+        <!-- footer -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <div class="footer-widget mb20">
+                        <!-- footer-widget -->
+                        <h3 class="footer-title">Contact Info</h3>
+                        <div class="ft-contact-info">
+                            <div class="ft-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="ft-content">
+                                +254-714-441-234
+                            </div>
+                        </div>
+                        <div class="ft-contact-info">
+                            <div class="ft-icon">
+                                <i class="fa fa-whatsapp fa-lg"></i>
+                            </div>
+                            <div class="ft-content">
+                                <a href="https://wa.me/+254739186580?">&nbsp;WhatsApp</a>
+                            </div>
+                        </div>
+                       <div class="ft-contact-info">
+                            <div class="ft-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="ft-content">
+                                info@openmaps.co.ke
+                            </div>
+                        </div>
+                        <div class="ft-contact-info">
+                           <div class="ft-icon">
+                               <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="ft-content">
+                                04 Chiromo Lane&nbsp;&#xb7;&nbsp;Westlands&nbsp;&#xb7;&nbsp;Nairobi&nbsp;&#xb7;&nbsp;Kenya.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.footer-widget -->
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                    <div class="footer-widget mb20">
+                        <!-- footer-widget -->
+                        <h3 class="footer-title">Quick Links</h3>
+                        <ul class="bullet listnone no-padding mb0">
+                            <li><i class="fa fa-angle-right"></i> <a href="index.html" class="Home">Home</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="train.html" title="Services">Trainings</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="atom0.html" title="Blog">Atom Properties</a></li>
+                        </ul>
+                        <!-- /.footer-widget -->
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <div class="footer-widget mb20">
+                        <!-- footer-widget -->
+                        <h3 class="footer-title">Follow Us</h3>
+                        <ul class="listnone no-padding mb0">
+                            <li class="footer-link"><a href="https://www.linkedin.com/company/openmaps"><i class="fa fa-linkedin ">&nbsp; LinkedIn</i></a></li>
+                            <br>
+                            <li class="footer-link"><a href="https://twitter.com/openmapsCo"><i class="fa fa-twitter-square ">&nbsp; Twitter</i></a></li>
+                            <br>
+                            <li class="footer-link"><a href="https://t.co/TF1wJeKXmk"><i class="fa fa-youtube ">&nbsp; Youtube</i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.footer-widget -->
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="footer-widget">
+                        <!-- footer-widget -->
+                        <h3 class="footer-title">Newsletter</h3>
+                        <p>Subscribe our email newsletter today to receive updates.</p>
+                        <form>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="sr-only control-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Enter Email Address">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-outline">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.footer-widget -->
+                </div>
+            </div>
+        </div>
+        <div class="tiny-footer">
+        <!-- tiny-footer -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p>Copyrights © 2022. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- /.footer -->
+    
+    <!-- /.tiny-footer -->
+    <!-- back to top icon -->
+    <a href=" #0 " class="cd-top" title="Go to top">Top</a>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/CoirzH4fByQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery plugins -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menumaker.js"></script>
+    <script type="text/javascript">
+    $("#navigation").menumaker({
+        title: "Menu",
+        format: "multitoggle"
+    });
+    </script>
+    <!-- animsition -->
+    <script type="text/javascript" src="js/animsition.js"></script>
+    <script type="text/javascript" src="js/animsition-script.js"></script>
+    <!-- sticky header -->
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="js/sticky-header.js"></script>
+    <!-- owl carsoul -->
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/testimonial.js"></script>
+    <!-- Back to top script -->
+    <script type="text/javascript" src="js/back-to-top.js"></script>
+    <!--Floating WhatsApp javascript-->
+    <script type="text/javascript" src="js/floating-wpp.min.js"></script>
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>
